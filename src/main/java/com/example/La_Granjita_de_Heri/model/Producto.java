@@ -32,4 +32,5 @@ public class Producto {
     @ManyToOne
     @JoinColumn(name = "raza_id", nullable=false)
     private Raza raza;
+
 }
