@@ -35,6 +35,7 @@ public class Venta {
     @JoinColumn(name = "metodo_id", nullable=false)
     private MetodoPago metodoPago;
 
+
     @ManyToOne
     @JoinColumn(name = "envio_id", nullable = false)
     private MetodoEnvio metodoEnvio;
