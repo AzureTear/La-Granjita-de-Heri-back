@@ -7,5 +7,5 @@ import com.example.La_Granjita_de_Heri.model.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
-    
+    Usuario findByCorreo(String correo);
 }
