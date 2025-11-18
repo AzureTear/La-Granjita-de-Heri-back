@@ -23,6 +23,11 @@ public class ventaService {
     } 
 
     @SuppressWarnings("null")
+    public Venta findById(Integer id) {
+        return ventaRepository.findById(id).orElse(null);
+    }
+
+    @SuppressWarnings("null")
     public List<Venta> findAll() {
         return ventaRepository.findAll();
     }
