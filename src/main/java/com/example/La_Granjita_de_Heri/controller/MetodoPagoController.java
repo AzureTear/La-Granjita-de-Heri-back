@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.La_Granjita_de_Heri.model.MetodoEnvio;
 import com.example.La_Granjita_de_Heri.model.MetodoPago;
 import com.example.La_Granjita_de_Heri.service.MetodoPagoService;
 

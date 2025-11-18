@@ -11,7 +11,7 @@ import com.example.La_Granjita_de_Heri.repository.VentaRepository;
 
 @Service
 @Transactional
-public class ventaService {
+public class VentaService {
 
     @Autowired
     private VentaRepository ventaRepository;

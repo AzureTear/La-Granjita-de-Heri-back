@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.La_Granjita_de_Heri.model.Producto;
+import com.example.La_Granjita_de_Heri.model.Raza;
 import com.example.La_Granjita_de_Heri.repository.ProductoRepository;
 
 public class ProductoService {
@@ -19,6 +20,10 @@ public class ProductoService {
     @SuppressWarnings("null")
     public Producto findById(Integer id) {
         return productoRepository.findById(id).orElse(null);
+    }
+
+    public Producto save(Producto producto) {
+        return productoRepository.save(producto);
     }
 
     public Producto partialUpdate(Producto producto) {
