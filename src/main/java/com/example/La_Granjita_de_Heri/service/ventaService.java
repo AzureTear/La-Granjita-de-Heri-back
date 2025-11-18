@@ -17,11 +17,29 @@ public class ventaService {
     private VentaRepository ventaRepository;
 
     
+    @SuppressWarnings("null")
     public Venta save(Venta venta) {
-    return ventaRepository.save(venta);
-    }
+        return ventaRepository.save(venta);
+    } 
 
+    @SuppressWarnings("null")
     public List<Venta> findAll() {
         return ventaRepository.findAll();
+    }
+
+    public Venta partialUpdate(Venta venta){
+        Venta existingVenta = ventaRepository.findById(venta.getId()).orElse(null);
+        if (existingVenta != null) {
+            if (venta.getProducto() != null) {
+                existingVenta.setProducto(venta.getProducto());
+            }
+
+            return ventaRepository.save(existingVenta);
+        }
+        return null;
+    }
+
+    public void deleteById(Integer id) {
+        ventaRepository.deleteById(id);
     }
 }
