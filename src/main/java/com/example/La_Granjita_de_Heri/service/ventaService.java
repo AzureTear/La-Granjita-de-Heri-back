@@ -17,17 +17,14 @@ public class VentaService {
     private VentaRepository ventaRepository;
 
     
-    @SuppressWarnings("null")
     public Venta save(Venta venta) {
         return ventaRepository.save(venta);
     } 
 
-    @SuppressWarnings("null")
     public Venta findById(Integer id) {
         return ventaRepository.findById(id).orElse(null);
     }
 
-    @SuppressWarnings("null")
     public List<Venta> findAll() {
         return ventaRepository.findAll();
     }
