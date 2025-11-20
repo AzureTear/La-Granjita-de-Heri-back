@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,13 +22,11 @@ public class VentaProducto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;    
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "producto_id")
     private Producto producto;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "venta_id")
     private Venta venta;
-
-    
 }

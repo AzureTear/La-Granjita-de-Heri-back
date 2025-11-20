@@ -3,10 +3,17 @@ package com.example.La_Granjita_de_Heri.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.La_Granjita_de_Heri.model.MetodoPago;
 import com.example.La_Granjita_de_Heri.repository.MetodoPagoRepository;
 
+import jakarta.transaction.Transactional;
+
+
+@Service
+@Transactional
+@SuppressWarnings("null")
 public class MetodoPagoService {
     
     @Autowired

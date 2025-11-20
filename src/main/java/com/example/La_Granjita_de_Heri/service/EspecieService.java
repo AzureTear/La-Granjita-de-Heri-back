@@ -3,11 +3,18 @@ package com.example.La_Granjita_de_Heri.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.La_Granjita_de_Heri.repository.EspecieRepository;
+
+import jakarta.transaction.Transactional;
+
 import com.example.La_Granjita_de_Heri.model.Especie;
 
 
+@Service
+@Transactional
+@SuppressWarnings("null")
 public class EspecieService {
     @Autowired
     private EspecieRepository especieRepository;

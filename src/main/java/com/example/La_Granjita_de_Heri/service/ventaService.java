@@ -11,6 +11,7 @@ import com.example.La_Granjita_de_Heri.repository.VentaRepository;
 
 @Service
 @Transactional
+@SuppressWarnings("null")
 public class VentaService {
 
     @Autowired
