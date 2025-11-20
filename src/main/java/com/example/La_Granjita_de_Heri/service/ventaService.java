@@ -32,8 +32,8 @@ public class VentaService {
     public Venta partialUpdate(Venta venta){
         Venta existingVenta = ventaRepository.findById(venta.getId()).orElse(null);
         if (existingVenta != null) {
-            if (venta.getProducto() != null) {
-                existingVenta.setProducto(venta.getProducto());
+            if (venta.getMetodoEnvio() != null) {
+                existingVenta.setMetodoEnvio((venta.getMetodoEnvio()));
             }
 
             return ventaRepository.save(existingVenta);
