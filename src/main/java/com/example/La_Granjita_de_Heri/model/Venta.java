@@ -34,13 +34,15 @@ public class Venta {
     @JoinColumn(name = "metodo_id", nullable=false)
     private MetodoPago metodoPago;
 
-
     @ManyToOne
     @JoinColumn(name = "envio_id", nullable = false)
     private MetodoEnvio metodoEnvio;
 
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 
-
-
-    
+    @ManyToOne
+    @JoinColumn(name = "estado_id")
+    private Estado estado;
 }

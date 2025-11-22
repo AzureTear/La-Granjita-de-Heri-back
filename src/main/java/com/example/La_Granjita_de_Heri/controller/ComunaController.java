@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.La_Granjita_de_Heri.model.Comuna;
 import com.example.La_Granjita_de_Heri.service.ComunaService;
 
-
 @RestController
 @RequestMapping("/api/comunas")
 public class ComunaController {
