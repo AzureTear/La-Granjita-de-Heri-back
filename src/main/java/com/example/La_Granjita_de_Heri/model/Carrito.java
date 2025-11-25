@@ -1,5 +1,8 @@
 package com.example.La_Granjita_de_Heri.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,8 +30,9 @@ public class Carrito {
     private Integer cantidad;
 
     @OneToMany
-    @JoinColumn(name = "producto_id")
-    private Producto producto;
+    @JoinColumn(name = "carrito_id")
+    private List<Producto> productos = new ArrayList<>();
+
 
 
     
