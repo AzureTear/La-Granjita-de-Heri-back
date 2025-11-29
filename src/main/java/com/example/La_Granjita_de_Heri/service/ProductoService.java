@@ -44,6 +44,7 @@ public class ProductoService {
             if (producto.getPrecio() != null) {
                 existingProducto.setPrecio(producto.getPrecio());
             }
+             
             if (producto.getImagenUrl() != null) {
                 existingProducto.setImagenUrl(producto.getImagenUrl());
             }
