@@ -13,8 +13,8 @@ public class WebConfig {
             @SuppressWarnings("null")
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                        .allowedOrigins("*")  // Cambia "*" por tu dominio si es necesario
+                registry.addMapping("/*")
+                        .allowedOrigins("https://la-granjita-de-heri-back.onrender.com/api/productos")  // Cambia "*" por tu dominio si es necesario
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH");
             }
         };
