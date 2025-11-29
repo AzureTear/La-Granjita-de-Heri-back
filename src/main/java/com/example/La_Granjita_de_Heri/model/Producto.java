@@ -29,6 +29,9 @@ public class Producto {
     @Column(name = "precioProducto", nullable = false)
     private Integer precio;
 
+    @Column(name = "imagenProducto",length = 100, nullable = false)
+    private String imagenUrl;
+
     @ManyToOne
     @JoinColumn(name = "raza_id", nullable=false)
     private Raza raza;
