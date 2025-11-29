@@ -14,7 +14,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/*")
-                        .allowedOrigins("")  // Cambia "*" por tu dominio si es necesario
+                        .allowedOrigins("*")  // Cambia "*" por tu dominio si es necesario
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH");
             }
         };
