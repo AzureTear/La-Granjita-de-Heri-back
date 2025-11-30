@@ -32,7 +32,7 @@ public class Producto {
     @Column(name = "imagenProducto", nullable = true)
     private String imagenUrl;
 
-    @Column(name = "descripcionProducto", nullable = false,length = 100)
+    @Column(name = "descripcionProducto", nullable = false)
     private String descripcion;
 
     @Column(name = "stockProducto",nullable = true)
