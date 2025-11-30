@@ -28,10 +28,15 @@ public class Producto {
 
     @Column(name = "precioProducto", nullable = false)
     private Integer precio;
-
     
     @Column(name = "imagenProducto", nullable = true)
     private String imagenUrl;
+
+    @Column(name = "descripcionProducto", nullable = false,length = 100)
+    private String descripcion;
+
+    @Column(name = "stockProducto",nullable = true)
+    private Integer stock;
 
     @ManyToOne
     @JoinColumn(name = "raza_id", nullable=false)

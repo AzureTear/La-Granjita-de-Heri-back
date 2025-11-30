@@ -44,9 +44,15 @@ public class ProductoService {
             if (producto.getPrecio() != null) {
                 existingProducto.setPrecio(producto.getPrecio());
             }
-             
+            
             if (producto.getImagenUrl() != null) {
                 existingProducto.setImagenUrl(producto.getImagenUrl());
+            }
+            if (producto.getDescripcion() != null) {
+                existingProducto.setDescripcion(producto.getDescripcion());
+            }
+            if (producto.getStock() != null) {
+                existingProducto.setStock(producto.getStock());
             }
 
             if (producto.getRaza() != null) {
