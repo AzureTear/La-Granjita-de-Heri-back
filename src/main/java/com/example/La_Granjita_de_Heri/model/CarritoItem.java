@@ -1,32 +1,31 @@
 package com.example.La_Granjita_de_Heri.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
+@Table(name = "carrito_item")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "carrito")
-public class Carrito {
+public class CarritoItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "carrito_id")
-    private List<CarritoItem> items = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "producto_id")
+    private Producto producto;
+
+    private Integer cantidad;
 }
+
