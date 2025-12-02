@@ -40,7 +40,7 @@ public class CarritoService {
 
         if (carrito == null || producto == null) return null;
 
-        // Ver si ya existe el producto en el carrito
+
         for (CarritoItem item : carrito.getItems()) {
             if (item.getProducto().getId().equals(productoId)) {
                 item.setCantidad(item.getCantidad() + 1);
@@ -49,7 +49,7 @@ public class CarritoService {
             }
         }
 
-        // Si no existe, agregar item nuevo
+
         CarritoItem nuevo = new CarritoItem();
         nuevo.setProducto(producto);
         nuevo.setCantidad(1);
